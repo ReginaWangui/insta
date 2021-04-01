@@ -10,14 +10,15 @@ For the full list of settings and their values, see
 https://docs.djangoproject.com/en/2.1/ref/settings/
 """
 
+
+
 import os
-import os
+from decouple import config
 import cloudinary
 import cloudinary.uploader
 import cloudinary.api
 import django_heroku
 import dj_database_url
-from decouple import config,Csv
 
 
 # Build paths inside the project like this: os.path.join(BASE_DIR, ...)

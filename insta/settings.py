@@ -47,6 +47,7 @@ INSTALLED_APPS = [
     #Local Apps
     'posts',
     'users',
+    'cloudinary'
 ]
 
 MIDDLEWARE = [
@@ -83,7 +84,20 @@ TEMPLATES = [
     },
 ]
 
+UPLOADCARE = {
+    'pub_key': 'ef2a4dc742a424862dd6',
+	'secret':SECRET_KEY,
+}
+
+
 WSGI_APPLICATION = 'insta.wsgi.application'
+
+
+cloudinary.config( 
+  cloud_name = "python-django-project", 
+  api_key = "588194731977868", 
+  api_secret = "AhvuhCJf_xygop8UE12cJVkihPs" 
+)
 
 
 # Database
@@ -167,3 +181,6 @@ MEDIA_URL = '/media/'
 LOGIN_URL = '/users/login/'
 LOGIN_REDIRECT_URL = '/'
 LOGOUT_REDIRECT_URL = '/users/login/'
+
+# Configure Django App for Heroku.
+django_heroku.settings(locals())

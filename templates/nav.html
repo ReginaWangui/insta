@@ -9,7 +9,7 @@
         <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarNav" aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
             <span class="navbar-toggler-icon"></span>
         </button>
-        <div class="collapse navbar-collapse" id="navbarNav" style="margin-left: 800px;">
+        <div class="collapse navbar-collapse" id="navbarNav" style="margin-left: 700px;">
             <ul class="navbar-nav mr-auto">
                 <li class="nav-item" style="margin-left: 20px;">
                     {% if request.user.profile.picture %}
@@ -19,19 +19,19 @@
                     {% else %}
                         <img src="{% static 'img/default-profile.png' %}" height="35" class="d-inline-block align-top rounded-circle"/>
                     {% endif %}
-                    <a href="{% url "users:detail" request.user.username %}" style="color:inherit;text-decoration:inherit;" >
+                    <a href="{% url "users:detail" request.user.username %}" style="color:inherit;text-decoration:inherit;" style="padding-top: 10px;" >
                         <i class="lead">@{{request.user.username}}</i>
                     </a>
                 </li>
 
-                <li class="nav-item nav-icon" style="margin-left:  20px; padding-top: 40px; text-decoration: none; color: black;">
+                <li class="nav-item nav-icon" style="margin-left:  20px; padding-top: 10px; text-decoration: none; color: black;">
                     <a href="{% url "posts:create_post" %}" >
                         <p style=" color: black;">AddPost</p>                     
    <span class="d-sm-block d-md-none d-xl-none">Add Post</span>
                     </a>
                 </li>
 
-                <li class="nav-item nav-icon" style="margin-left: 20px;padding-top: 40px;">
+                <li class="nav-item nav-icon" style="margin-left: 20px;padding-top: 10px;">
                     <a href="{% url "users:logout" %}">
                         <p style=" color: black;">LogOut</p>
                         <span class="d-sm-block d-md-none d-xl-none">Log Out</span>
